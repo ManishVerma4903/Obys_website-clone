@@ -1,0 +1,606 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Plain Light";
+    color: white;
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x:hidden ;
+}
+
+.abc{
+
+    overflow: hidden;
+    position: relative;
+    
+    
+}
+.a{
+    display: inline-block;
+    transition: all 0.5s linear;
+    padding-bottom: 0.5vh;
+    
+}
+.b{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    padding-bottom: 0.5vh;
+    transition: all 0.5s linear;
+}
+.abc:hover .a{
+    transform: translateY(-100%);
+    
+}
+.abc:hover .b{
+    transform: translateY(-100%);
+    
+}
+
+.mousefollower{
+    border: 2px solid #fff;
+   
+}
+
+#loader{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #0B0B0B;
+    z-index: 999;
+    padding: 25vh 10vw;
+}
+#line{
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2vw;
+
+}
+
+
+#line1-part1{
+
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+#line1-part1 h5,#line1-part1 h6{
+    font-size: 3vw;
+    font-family: "silk serif";
+    font-weight: 100;
+}
+#line1-part1 h5{
+    width: 5vw;
+    text-align: right;
+}
+#line h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+#line h2{
+    font-size: 5vw;
+    text-transform: uppercase;
+    font-weight: 500;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+
+
+
+@keyframes loaderanime {
+    0%{
+        font-family: "plian light";
+        -webkit-text-stroke: 1px  #fff;
+        font-weight: 500;
+        opacity:1;
+    }
+    47%{
+        font-family: "plian light";
+        -webkit-text-stroke: 1px  #fff;
+        font-weight: 500;
+        opacity:0;
+    }
+    50%{
+        font-family: "silk serif";
+        -webkit-text-stroke: 1px  #fff;
+        font-weight: 500;
+        color: transparent;
+        opacity:1;
+    }
+    100%{
+        font-family: "silk serif";
+        -webkit-text-stroke: 1px  #fff;
+        font-weight: 500;
+        color: transparent;
+        opacity:0;
+    }
+}
+
+#main{
+    position: relative;
+    background-color: #151515;
+}
+#page1{
+    width: 100%;
+    height: 100vh;
+    background-color: #191919;
+}
+#page1 #nav{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6vh 8vw;
+    z-index: 999999;
+
+}
+#page1 #nav #nav-right{
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+#page1 #nav  h3{
+    font-size: 1vw;
+    font-weight: 300;
+    
+}
+
+.hero{
+    width: 70%;
+    margin-left: 28%;
+    line-height: 1;
+    height: fit-content;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    z-index: 9999;
+
+}
+.hero h1{
+    font-size: 7.2vw;
+    font-weight: 600;
+}
+.hero h2{
+    font-size: 7.2vw;
+    font-weight: 600;
+    border-bottom: 0.5vw solid #fff;
+    padding-bottom: 0.8vw;
+}
+
+#hero1::before {
+    content: "01";
+    position: absolute;
+    font-weight: 400;
+    font-size: 3vw;
+    font-family: "silk serif";    
+    top: 28%;
+    left: 19%;
+    overflow-x: visible;
+
+}
+
+.hero:nth-child(2){
+    margin-top: 12vh;
+}
+.hero h2:hover{
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 500;
+    border-bottom: 0.5vw solid #ffffff00;
+}
+
+#flag{
+    width: 20vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+}
+#hero3{
+    position: relative;
+    z-index: 999;
+}
+#page2{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding-top: 17vh;
+    background-color: rgb(25, 25, 24);
+}
+#video-cursor{
+    width: 8vw;
+    height: 8vw;
+    border-radius: 50%;
+    background-color: #FFA63D;
+    position: absolute;
+    left: 60%;
+    top: -10%;
+    z-index:999 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vw;
+}
+#video-container{
+    width: 71vw;
+    height: 60vh;
+    position: relative;
+    left: 27.5vw;
+    background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+#video-container img{
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   object-fit: cover;
+   top: 0;
+
+}
+#video-container video{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   opacity: 0;
+
+}
+
+
+
+#page3{
+    width: 100%;
+    background-color: rgb(25, 25, 24);
+    position: relative;
+    padding-top: 2vw;
+}
+#page3 h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+    margin-left: 26%;
+    width: 70%;
+}
+#page3 h1::before{
+    content: "02";
+    position: absolute;
+    left: -10%;
+    font-weight: 400;
+    font-size: 3vw;
+    font-family: "silk serif";    
+    top: 1%;
+}
+
+
+
+#image-div-container{
+    position: relative;
+    padding: 2vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 2vw;
+}
+#image-div{
+    width: 30vw;
+    height: 40vw;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+#image-div:nth-child(1){
+    width: 22vw;
+    height: 30vw;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+#image-div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+#page3-circle1{
+    width: 25vw;
+    height: 25vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 45vh;
+    margin-left: 10vw;
+    position: relative;
+    
+}
+#page3-circle2 #circle-in p{
+    width: fit-content;
+    
+}
+
+#circle-in{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scale:0;
+    transition: all ease 0.3s;
+    border-radius: 50%;
+    
+}
+
+
+#circle-in p{
+    color: #0B0B0B;
+    font-size: 1vw;
+    width: 80%;
+    letter-spacing: 0.5;
+    scale:0;
+    transition: all ease 0.3s;
+    transition-delay: 0.55s;
+
+}
+#page3-circle1:hover #circle-in{
+   scale:1;
+}
+#page3-circle1:hover p{
+    scale:1;
+
+}
+
+
+#page3-circle2 #circle-in{
+    rotate: 45deg;
+    
+
+ }
+#page3-circle2:hover #circle-in{
+    scale:1;
+}
+#page3-circle2:hover p{
+    scale:1;
+    
+ }
+ 
+
+
+#page3-circle1 svg{
+    width: 6vw;
+}
+
+
+
+
+#page3-circle2{
+    width: 25vw;
+    height: 25vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 45vh; */
+    rotate: -45deg;
+}
+
+
+#page3-circle2 svg{
+    width: 6vw;
+}
+
+
+
+
+#page4{
+    width: 100%;
+    /* height: 100vh; */
+    background-color: rgb(25, 25, 24);
+    position: relative;
+    padding: 7vh 0;
+}
+#page4-content{
+    padding-left: 26%;
+    position: relative;
+    width: 67vw;
+
+}
+
+#page4-content>h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+}
+#page4-content>h1::before{
+    content: "03";
+    position: absolute;
+    left: -14%;
+    font-weight: 400;
+    font-size: 3vw;
+    font-family: "silk serif";    
+    top: 1%;
+}
+#underline{
+    width: 100%;
+    height: 1px;
+    background-color: #EBD3D3;
+    margin: 4.5vw 0;
+}
+#page4-content>p{
+    font-size: 2.2vw;
+    width: 50%;
+    margin-bottom: 3vw ;
+}
+
+#page4-flex{
+    display: flex;
+    gap: 1vw;
+}
+#page4-flex img{
+    width: 46%;
+}
+#page4-flex p{
+    width: 25%;
+    font-size: 1vw;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+
+#page4-blue-box{
+    width: 26vw;
+    background-color: #3F7DF4;
+    position: relative;
+    margin-top:  -20%;
+    left: 32%;
+    padding: 3.4vw ;
+}
+
+#blue-box-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    padding: 2.5vw 0;
+    /* background-color: red; */
+}
+
+#blue-box-content>h1{
+    font-size: 1.4vw;
+    font-weight: 400;
+
+}
+#blue-box-content p{
+    font-size: 0.9vw;
+    width: 40%;
+}
+
+#page5{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    white-space: nowrap;
+}
+
+#page5-elem,#page5-elem2{
+    overflow-x: hidden;
+    margin: 1vh 0;
+}
+
+#page5-elem h1{
+    font-size: 7vw;
+    display: inline-block;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-left: 16px;
+    animation: anime 15s linear infinite;
+    
+}
+#page5-elem h1 i{
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-family: "silk serif";
+
+}
+
+@keyframes anime {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+
+#page5-elem2 h1{
+    font-size: 7vw;
+    display: inline-block;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-left: 16px;
+    animation: anime 12s linear infinite reverse;
+
+    
+}
+#page5-elem2 h1 i{
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-family: "silk serif";
+}
+
+
+#footer{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(25, 25, 24);
+    position: relative;
+    padding: 6vh 0;
+}
+#footer-content{
+    padding-left: 28%;
+    position: relative;
+    width: 65vw;   
+}
+#footer-content h1{
+     font-size: 7vw;
+     font-weight: 600;
+     transition: all 0.5s ;
+     height: fit-content;
+     position: relative;
+}
+#footer-content h1::before{
+    content: "04";
+    position: absolute;
+    left: -14%;
+    font-weight: 400;
+    font-size: 3vw;
+    font-family: "silk serif";    
+    top: 1%;
+}
+#footer-content h1 svg{
+     width: 7vw;
+}
+
+#footer-links{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 8vw;
+    margin-bottom: 8vw;
+}
+#footer-links h4{
+    margin: 4vh 0;
+    font-size: 1vw;
+}
+#footer-links h3{
+    font-size: 1.7vw;
+    font-weight: 400;
+    line-height: 1;
+}
+
+
+
+._canvas_container{
+    z-index: 99999 !important;
+    pointer-events: none;
+}
